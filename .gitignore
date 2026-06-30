@@ -4,3 +4,4 @@ env/
 venv/
 ENV/
 .ipynb_checkpoints/
+anaconda_projects/
