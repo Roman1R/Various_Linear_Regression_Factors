@@ -96,6 +96,39 @@ def find_weight_Nesterov_momentum(data, number_of_epochs = 12, rate_learning = 0
         b+=v_b
     return x, b
 
+def elipsoid_method(data, number_of_epochs = 500, radius = 150):
+    elipsoid = [[0.0 for i in range(20)] for i in range(20)]
+    center = [0 for i in range(20)]
+    center[19] = 10
+    for i in range(20):
+        elipsoid[i][i] = radius
+    for i in range(number_of_epochs):
+        x = center[:19]
+        b = center[19]
+        g, gradb = gradient(x, b, data)
+        g.append(gradb)
+        start_h = g
+        elipsoid1 = [0 for i in range(20)]
+        for i in range(20):
+            for j in range(20):
+                elipsoid1[i] += elipsoid[i][j] * start_h[j]
+        elipsoid2 = 0
+        for i in range(20):
+            elipsoid2 += elipsoid1[i] * start_h[i]
+        h = [0 for i in range(20)]
+        for i in range(20):
+            h[i] = elipsoid1[i] / (elipsoid2 ** 0.5)
+
+        for i in range(20):
+            center[i] -= h[i] / 21
+
+        for i in range(20):
+            for j in range(20):
+                elipsoid[i][j] -= (2 / 21) * h[i] * h[j]
+                elipsoid[i][j] *= (400 / 399)
+    return center[:19], center[19]
+
+
 def errors(data, v, b):
     mse = 0
     mn = 0
