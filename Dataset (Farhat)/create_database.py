@@ -105,28 +105,13 @@ for path in folder_path:
                 except:
                     pass
 
-                # print(rooms, area, flat_floor, max_floor, to_center, closest_station, min_distance_to_metro, price)
-                #
                 with open('kvartiras.csv', 'a', encoding='utf-8', newline='') as f:
                     writer = csv.writer(f)
                     writer.writerow((rooms, area, flat_floor, max_floor, relative_floor,
                                      to_center, closest_station, min_distance_to_metro,
                                      balkony_or_lojiya, chistovaya_otdelka, rosreestr, from_zastroishik,
                                      price))
-        except Exception as e:
-            print(title_full)
-            print(path, filik)
-            print(e)
-            input('Остановлено, запиши проблему')
 
-
-# проблема в flat1/data_2.json  could not convert string to float: '1-к.'
-
-# /flats/flat2/ data_17.json
-# could not convert string to float: '2-к.'
-
-# flats/flat5plus/ data_1.json
-# could not convert string to float: 'более-к.'
 
 
 
