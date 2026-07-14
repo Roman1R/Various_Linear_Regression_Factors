@@ -1,6 +1,10 @@
-import csv
+import matplotlib.pyplot as plt   # графики
+import numpy as np                 # массивы (опционально)
+import csv                         # чтение данных
+import math                        # математика (sqrt, exp)
 
-def gradient(w, b,   data, number_of_sings=19):
+
+def gradient(w, b,   data, number_of_sings=20):
     grad = [0 for i in range(number_of_sings)]#градиент
     gradb = 0#градиент свободного члена
     for i in range(len(data)):
@@ -57,21 +61,26 @@ def prev_csv(data):#функция переводит данные в списо
             list_data.append(t)
     return list_data
 
-def find_weights_simple(data, number_of_epochs=1000, rate_learning = 0.05):#стандартный градиент
-    v = [0.0 for i in range(19)]
+def find_weights_simple(data, tst_data, number_of_epochs=350, rate_learning = 0.05):#стандартный градиент
+    v = [0.0 for i in range(20)]
     b = sum(data[i][-1] for i in range(len(data)))/len(data)
+    history = []
     for i in range(number_of_epochs):
         g, gradb = gradient(v, b, data)
         for j in range(len(v)):
             v[j] -= (rate_learning*g[j])
         b-=gradb*rate_learning
-    return v, b
+        if i > 30:
+            _, _, ms = errors(tst_data, v, b)
+            history.append(ms)
+    return v, b, history
 
-def find_weight_momentum(data, number_of_epochs = 12, rate_learning = 0.05, rate_inertion = 0.3):
-    x = [0.0 for i in range(19)]
-    v = [0.0 for i in range(19)]
+def find_weight_momentum(data, tst_data, number_of_epochs = 3000, rate_learning = 0.05, rate_inertion = 0.03):
+    x = [0.0 for i in range(20)]
+    v = [0.0 for i in range(20)]
     v_b = 0
-    b = sum(data[i][-1] for i in range(len(data)))/len(data)
+    b = 0
+    history = []
     for i in range(number_of_epochs):
         g, gradb = gradient(x, b, data)
         for j in range(len(x)):
@@ -79,13 +88,17 @@ def find_weight_momentum(data, number_of_epochs = 12, rate_learning = 0.05, rate
             x[j]+=v[j]
         v_b = v_b*rate_inertion- (rate_learning*gradb)
         b+=v_b
-    return x, b
+        if i > 62:
+            ms, _, r = errors(tst_data, x, b)
+            history.append(r)
+    return x, b, history
 
-def find_weight_Nesterov_momentum(data, number_of_epochs = 12, rate_learning = 0.05, rate_inertion = 0.3):
-    x = [0.0 for i in range(19)]
-    v = [0.0 for i in range(19)]
-    b = sum(data[i][-1] for i in range(len(data)))/len(data)
+def find_weight_Nesterov_momentum(data, tst_data, number_of_epochs = 300, rate_learning = 0.05, rate_inertion = 0.3):
+    x = [0.0 for i in range(20)]
+    v = [0.0 for i in range(20)]
+    b = 0
     v_b = 0
+    history = []
     for i in range(number_of_epochs):
         new_x = [x[j]+v[j]*rate_inertion for j in range(len(x))]
         g, gradb = gradient(new_x, b, data)
@@ -94,39 +107,46 @@ def find_weight_Nesterov_momentum(data, number_of_epochs = 12, rate_learning = 0
             x[j]+=v[j]
         v_b = v_b*rate_inertion- (rate_learning*gradb)
         b+=v_b
-    return x, b
+        if i > 42:
+            ms, _, r = errors(tst_data, x, b)
+            history.append(r)
+    return x, b, history
 
-def elipsoid_method(data, number_of_epochs = 500, radius = 150):
-    elipsoid = [[0.0 for i in range(20)] for i in range(20)]
-    center = [0 for i in range(20)]
-    center[19] = 10
-    for i in range(20):
+def elipsoid_method(data, tst_data, number_of_epochs = 150, radius = 400):
+    elipsoid = [[0.0 for i in range(21)] for i in range(21)]
+    center = [0 for i in range(21)]
+    center[20] = 0
+    history = []
+    for i in range(21):
         elipsoid[i][i] = radius
     for i in range(number_of_epochs):
-        x = center[:19]
-        b = center[19]
+        x = center[:20]
+        b = center[20]
         g, gradb = gradient(x, b, data)
         g.append(gradb)
         start_h = g
-        elipsoid1 = [0 for i in range(20)]
-        for i in range(20):
-            for j in range(20):
-                elipsoid1[i] += elipsoid[i][j] * start_h[j]
+        elipsoid1 = [0 for i in range(21)]
+        for k in range(21):
+            for j in range(21):
+                elipsoid1[k] += elipsoid[k][j] * start_h[j]
         elipsoid2 = 0
-        for i in range(20):
-            elipsoid2 += elipsoid1[i] * start_h[i]
-        h = [0 for i in range(20)]
-        for i in range(20):
-            h[i] = elipsoid1[i] / (elipsoid2 ** 0.5)
+        for k in range(21):
+            elipsoid2 += elipsoid1[k] * start_h[k]
+        h = [0 for i in range(21)]
+        for k in range(21):
+            h[k] = elipsoid1[k] / (elipsoid2 ** 0.5)
 
-        for i in range(20):
-            center[i] -= h[i] / 21
+        for k in range(21):
+            center[k] -= h[k] / 22
 
-        for i in range(20):
-            for j in range(20):
-                elipsoid[i][j] -= (2 / 21) * h[i] * h[j]
-                elipsoid[i][j] *= (400 / 399)
-    return center[:19], center[19]
+        for k in range(21):
+            for j in range(21):
+                elipsoid[k][j] -= (2 / 22) * h[k] * h[j]
+                elipsoid[k][j] *= (441 / 440)
+        if i > 19 :
+            ms, _, r = errors(tst_data, x, b)
+            history.append(r)
+    return center[:20], center[20], history
 
 
 def errors(data, v, b):
@@ -154,26 +174,30 @@ def errors(data, v, b):
 
     r = 1 - ss_res / ss_total
 
-    print("mse:", mse)
-    print("rmse:", rmse)
-    print("r:", r)
     return mse, rmse, r
 
 
-file = open('dataset_sample_1000 (1).csv','r')
+file = open("dataset_sample_3000.csv", 'r')
 train_data = csv.reader(file)
 train_list_data = prev_csv(train_data)
 file.close()
 train_list_data, mean, std = data_normalized(train_list_data)
 
-
-x, b = find_weight_Nesterov_momentum(train_list_data)
-
-file = open('dataset_prepared (1).csv','r')
+file = open('dataset_sample_all.csv','r')
 test_data = csv.reader(file)
 test_list_data = prev_csv(test_data)
 file.close()
 test_list_data, mean, std = data_normalized(test_list_data, mean, std)
 
 
+x, b, history = elipsoid_method(train_list_data, test_list_data)
+
 mse_test, rmse_test, r_test = errors(test_list_data, x, b)
+print(mse_test, rmse_test, r_test)
+plt.figure(figsize=(15, 5))
+plt.plot(history, color='blue', linewidth=2)
+plt.xlabel('Эпоха')
+plt.ylabel('R^2')
+plt.title('Обычный градиентный спуск')
+plt.grid(True, alpha=0.3)
+plt.show()
