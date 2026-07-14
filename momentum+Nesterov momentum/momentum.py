@@ -75,7 +75,7 @@ def find_weights_simple(data, tst_data, number_of_epochs=350, rate_learning = 0.
             history.append(ms)
     return v, b, history
 
-def find_weight_momentum(data, tst_data, number_of_epochs = 3000, rate_learning = 0.05, rate_inertion = 0.03):
+def find_weight_momentum(data, tst_data, number_of_epochs = 120, rate_learning = 0.05, rate_inertion = 0.03):
     x = [0.0 for i in range(20)]
     v = [0.0 for i in range(20)]
     v_b = 0
@@ -93,7 +93,7 @@ def find_weight_momentum(data, tst_data, number_of_epochs = 3000, rate_learning 
             history.append(r)
     return x, b, history
 
-def find_weight_Nesterov_momentum(data, tst_data, number_of_epochs = 300, rate_learning = 0.05, rate_inertion = 0.3):
+def find_weight_Nesterov_momentum(data, tst_data, number_of_epochs = 120, rate_learning = 0.05, rate_inertion = 0.3):
     x = [0.0 for i in range(20)]
     v = [0.0 for i in range(20)]
     b = 0
@@ -112,7 +112,7 @@ def find_weight_Nesterov_momentum(data, tst_data, number_of_epochs = 300, rate_l
             history.append(r)
     return x, b, history
 
-def elipsoid_method(data, tst_data, number_of_epochs = 150, radius = 400):
+def elipsoid_method(data, tst_data, number_of_epochs = 1500, radius = 300):
     elipsoid = [[0.0 for i in range(21)] for i in range(21)]
     center = [0 for i in range(21)]
     center[20] = 0
