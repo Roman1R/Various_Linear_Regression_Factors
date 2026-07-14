@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86cffa58-49b7-4d0a-80be-ec21ac3eda7e" name="Changes" comment="нарисовал графики для каждого метода" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Penorwa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Roman1R/Various_Linear_Regression_Factors.git&quot;,
+    &quot;accountId&quot;: &quot;22e150f1-b902-486d-917c-7edef1563e7b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3FiW0bzLchTFfu9h2SJgPPrpkdW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.momentum.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Users/Пользователь/PycharmProjects/Various_Linear_Regression_Factors/momentum+Nesterov momentum",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.jupyter.py.connections.configurable.JupyterServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\PycharmProjects\Various_Linear_Regression_Factors\momentum+Nesterov momentum" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\PycharmProjects\Various_Linear_Regression_Factors\momentum+Nesterov momentum" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86cffa58-49b7-4d0a-80be-ec21ac3eda7e" name="Changes" comment="" />
+      <created>1782558147823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782558147823</updated>
+      <workItem from="1782558148911" duration="750000" />
+      <workItem from="1782577455103" duration="459000" />
+      <workItem from="1782923492080" duration="130000" />
+      <workItem from="1782977173441" duration="109000" />
+      <workItem from="1782977362284" duration="149000" />
+      <workItem from="1782978198028" duration="689000" />
+      <workItem from="1782989930922" duration="42000" />
+      <workItem from="1783233373409" duration="333000" />
+      <workItem from="1783350965168" duration="190000" />
+      <workItem from="1783352102806" duration="880000" />
+      <workItem from="1783754264281" duration="1561000" />
+      <workItem from="1783758040340" duration="5765000" />
+      <workItem from="1783940558523" duration="2624000" />
+      <workItem from="1784016755837" duration="3005000" />
+    </task>
+    <task id="LOCAL-00001" summary="в этом файле нормализация данных и обычный градиент">
+      <option name="closed" value="true" />
+      <created>1782558675665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782558675665</updated>
+    </task>
+    <task id="LOCAL-00002" summary="добавлен файл в котором реализованы моментум и нестеров моментум для обычной функции ошибки в среднем 76% угадывает">
+      <option name="closed" value="true" />
+      <created>1782577553041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782577553041</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ознакомьтесь с пояснением прежде чем использовать">
+      <option name="closed" value="true" />
+      <created>1782577726931</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782577726931</updated>
+    </task>
+    <task id="LOCAL-00004" summary="добавлен метод центров масс с использованием элипсоида">
+      <option name="closed" value="true" />
+      <created>1783233432145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783233432145</updated>
+    </task>
+    <task id="LOCAL-00005" summary="добавлен метод центров масс с использованием элипсоида">
+      <option name="closed" value="true" />
+      <created>1783233549756</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783233549756</updated>
+    </task>
+    <task id="LOCAL-00006" summary="объяснена каждая функция в общих чертах">
+      <option name="closed" value="true" />
+      <created>1783353925518</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1783353925518</updated>
+    </task>
+    <task id="LOCAL-00007" summary="нарисовал графики для каждого метода">
+      <option name="closed" value="true" />
+      <created>1784017738605</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1784017738605</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="в этом файле нормализация данных и обычный градиент" />
+    <MESSAGE value="добавлен файл в котором реализованы моментум и нестеров моментум для обычной функции ошибки в среднем 76% угадывает" />
+    <MESSAGE value="ознакомьтесь с пояснением прежде чем использовать" />
+    <MESSAGE value="добавлен метод центров масс с использованием элипсоида" />
+    <MESSAGE value="объяснена каждая функция в общих чертах" />
+    <MESSAGE value="нарисовал графики для каждого метода" />
+    <option name="LAST_COMMIT_MESSAGE" value="нарисовал графики для каждого метода" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Various_Linear_Regression_Factors$momentum.coverage" NAME="momentum Coverage Results" MODIFIED="1784022296812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/momentum+Nesterov momentum" />
+  </component>
+</project>

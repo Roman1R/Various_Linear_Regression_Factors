@@ -6,3 +6,6 @@ ENV/
 .ipynb_checkpoints/
 anaconda_projects/
 .DS_Store
+__pycache__/
+tgtoken.py
+
