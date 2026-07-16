@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86cffa58-49b7-4d0a-80be-ec21ac3eda7e" name="Changes" comment="нарисовал графики для каждого метода" />
+    <list default="true" id="86cffa58-49b7-4d0a-80be-ec21ac3eda7e" name="Changes" comment="добавил описание своей работы">
+      <change beforePath="$PROJECT_DIR$/.idea/Various_Linear_Regression_Factors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Various_Linear_Regression_Factors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/momentum+Nesterov momentum/с_графиками.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/momentum+Nesterov momentum/с_графиками.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,9 +47,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.build_report_v2_updated.executor": "Run",
     "Python.momentum.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Пользователь/PycharmProjects/Various_Linear_Regression_Factors/momentum+Nesterov momentum",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -93,6 +99,8 @@
       <workItem from="1783758040340" duration="5765000" />
       <workItem from="1783940558523" duration="2624000" />
       <workItem from="1784016755837" duration="3005000" />
+      <workItem from="1784022863212" duration="712000" />
+      <workItem from="1784135497976" duration="1836000" />
     </task>
     <task id="LOCAL-00001" summary="в этом файле нормализация данных и обычный градиент">
       <option name="closed" value="true" />
@@ -150,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784017738605</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="добавил описание своей работы">
+      <option name="closed" value="true" />
+      <created>1784022966968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1784022966968</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,9 +190,11 @@
     <MESSAGE value="добавлен метод центров масс с использованием элипсоида" />
     <MESSAGE value="объяснена каждая функция в общих чертах" />
     <MESSAGE value="нарисовал графики для каждого метода" />
-    <option name="LAST_COMMIT_MESSAGE" value="нарисовал графики для каждого метода" />
+    <MESSAGE value="добавил описание своей работы" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил описание своей работы" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Various_Linear_Regression_Factors$build_report_v2_updated.coverage" NAME="build_report_v2_updated Coverage Results" MODIFIED="1784138020313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Various_Linear_Regression_Factors$momentum.coverage" NAME="momentum Coverage Results" MODIFIED="1784022296812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/momentum+Nesterov momentum" />
   </component>
 </project>
